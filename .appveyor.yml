@@ -1,5 +1,5 @@
 image: Visual Studio 2022
-build: off
+build: false
 skip_commits:
   files:
   - '**/*.md'
