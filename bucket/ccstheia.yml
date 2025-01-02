@@ -1,0 +1,16 @@
+version: 1.5.1
+description: TI Code Composer Studio Theia
+homepage: https://www.ti.com/tool/download/CCSTUDIO-THEIA
+license: MIT
+architecture:
+  64bit:
+    url: https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-63JH5Zr6eq/1.5.1/CCSTheia1.5.1.00003_win64.zip
+    hash: 9f81dc1b57aeb8b35d771b88a0c63d8350d0ccba483ef0f2732fea55a1379d41
+bin: ccstudio
+checkver:
+  url: https://www.ti.com/tool/download/CCSTUDIO-THEI
+  regex: Version:\s*([0-9]+\.[0-9]+\.[0-9]+)
+autoupdate:
+  architecture:
+    64bit:
+      url: https://github.com/oven-sh/bun/releases/download/bun-v$version/bun-darwin-x64.zip
