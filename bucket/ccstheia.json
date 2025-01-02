@@ -1,0 +1,38 @@
+{
+    "version": "1.5.1",
+    "description": "Code Composer Studio Theia IDE for embedded development.",
+    "homepage": "https://www.ti.com/tool/CCS",
+    "license": "Texas Instruments License",
+    "url": "https://dr-download.ti.com/software-development/ide-configuration-compiler-or-debugger/MD-63JH5Zr6eq/1.5.1/CCSTheia1.5.1.00003_win64.zip",  // Replace with the actual download link
+    "hash": "9f81dc1b57aeb8b35d771b88a0c63d8350d0ccba483ef0f2732fea55a1379d41",
+    "installer": {
+        "script": [
+            "Expand-Archive -Path \"$dir\\CCSTheia1.5.1.00003_win64.zip\" -DestinationPath \"$dir\\ccstheia$version\"",
+            "Start-Process -FilePath \"$dir\\ccstheia$version\\ccs_theia_setup_1.5.1.00003\" -ArgumentList '/S' -Wait"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Remove-Item -Recurse -Force \"$dir\\ccstheia*\""
+        ]
+    },
+    "bin": [
+        [
+            "$dir\\ccstheia$version\\ccs\\theia",
+            "ccstudio"
+        ]
+    ],
+    "shortcuts": [
+        {
+            "name": "CCS Theia",
+            "target": "$bin\\ccstudio.exe"
+        }
+    ],
+    "checkver": {
+        "url": "https://www.ti.com/tool/download/CCSTUDIO-THEIA",
+        "regex": "Version:\\s*([0-9]+\\.[0-9]+\\.[0-9]+)"
+    },
+    "autoupdate": {
+        "url": "https://software-dl.ti.com/ccs/esd/CCS_Theia.zip"
+    }
+}
