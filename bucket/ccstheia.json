@@ -18,14 +18,14 @@
     },
     "bin": [
         [
-            "$dir\\ccstheia$version\\ccs\\theia",
+            "ccstudio.exe",
             "ccstudio"
         ]
     ],
     "shortcuts": [
         [
-            "$bin\\ccstudio.exe",
-            "CCS Theia"
+            "ccstudio.exe",
+            "CCS Theia 1.5.1"
         ]
     ],
     "checkver": {
