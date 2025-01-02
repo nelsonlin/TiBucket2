@@ -23,10 +23,10 @@
         ]
     ],
     "shortcuts": [
-        {
-            "name": "CCS Theia",
-            "target": "$bin\\ccstudio.exe"
-        }
+        [
+            "$bin\\ccstudio.exe",
+            "CCS Theia"
+        ]
     ],
     "checkver": {
         "url": "https://www.ti.com/tool/download/CCSTUDIO-THEIA",
